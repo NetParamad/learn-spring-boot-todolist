@@ -1,6 +1,5 @@
 package com.todolist.task;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,14 +26,6 @@ class TaskApiTest {
 
 	@Autowired
 	MockMvc mockMvc;
-
-	@Autowired
-	TaskRepository taskRepository;
-
-	@BeforeEach
-	void setUp() {
-		taskRepository.deleteAll();
-	}
 
 	@Test
 	void createsATask() throws Exception {
